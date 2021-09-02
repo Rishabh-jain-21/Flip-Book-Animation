@@ -22,14 +22,14 @@ justify-content: space-between;
 }
 .book:hover .pages{
     transform: rotateX(10deg) rotateY(-180deg);
-    z-index: 2;
+    z-index: 3;
 }
 .cover{
     z-index: 1;
     transition: all 3s;
 }
 .back-cover{
-    z-index: -2;
+    z-index: -3;
 }
 .cover , .back-cover{
     /* border: 1px solid wheat; */
@@ -51,6 +51,9 @@ justify-content: space-between;
     transform:rotateX(10deg);
     transform-origin:center left;
     z-index: -1;
+}
+.last-page{
+    z-index: -2;
 }
 .pages:nth-child(2){
     transition-duration: 3s;
@@ -84,8 +87,11 @@ justify-content: space-between;
     transition-duration: 4.4s;
 }
 
-.last-page p{
-    color: black;
+.last-page h2{
+    /* z-index: -2; */
+    position: relative;
+    margin-top: 10px;
+    color: rgb(124, 117, 117);
     font-weight: 600;
     font-size: larger;
     text-align: center;
